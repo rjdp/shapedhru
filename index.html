@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<html lang="en" ng-app="ngo">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Too Young to Get MARRIED</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Rotating Words with CSS Animations" />
+        <meta name="keywords" content="css3, animations, rotating words, sentence, typography" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+           <link rel="alternate stylesheet" title="compact" media="screen" type="text/css" href="Logincss/demo.css">
+        
+    <link rel="alternate stylesheet" title="compact" media="screen" type="text/css" href="Logincss/animate-custom.css">
+    <link href='http://fonts.googleapis.com/css?family=Trocchi|Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+    <link rel="alternate stylesheet" title="compact" media="screen" type="text/css" href="style.css">
+     <link rel="alternate stylesheet" title="compact" media="screen" type="text/css" href="Logincss/style4.css">
+ <link rel="alternate stylesheet" title="compact" media="screen" type="text/css" href="Logincss/style3.css">
+    <link rel="alternate stylesheet" title="compact" media="screen" type="text/css" href="iconic.css">
+
+        <link rel="stylesheet" title="compact" media="screen" type="text/css" href="css/demo.css" >
+
+
+        <link rel="stylesheet" title="compact" media="screen" type="text/css" href="css/main.css" >
+        <link rel="stylesheet" title="compact" media="screen" type="text/css" href="Gallerycss/style_common.css" />
+        <link rel="stylesheet" title="compact" media="screen" type="text/css" href="Gallerycss/style10.css" />
+        <link rel="stylesheet" title="compact" media="screen" type="text/css" href="Gallerycss/demo.css" />
+
+
+
+        
+    <script src="prefix-free.js"></script>
+    <script src="js/modernizr.custom.72111.js"></script>
+     <link rel="shortcut icon" href="../favicon.ico"> 
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+    <style>
+      .no-cssanimations .rw-words span:first-child{
+        opacity: 1;
+        color: #fff;
+        text-shadow: none;
+      }
+      </style>
+
+        <link rel="stylesheet" type="text/css" href="Storycss/demo.css" />
+        <link rel="stylesheet" type="text/css" href="Storycss/style.css" />
+
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+    <link rel="stylesheet" title="compact" media="screen" type="text/css" href="css/demo.css" >
+        <link rel="stylesheet" title="compact" media="screen" type="text/css" href="css/main.css" >
+
+
+
+    <style>
+      .no-cssanimations .rw-words span:first-child{
+        opacity: 1;
+        color: #fff;
+        text-shadow: none;
+      }
+    </style>
+    <!--[if lt IE 9]> 
+      <style>
+        body{ background: #fff; }
+        .rw-wrapper{ display: none; } 
+        .rw-sentence-IE{ display: block; }
+      </style>
+    <![endif]-->
+
+     <script src="js/angular.min.js"></script>
+   <script src="js/angular-route.min.js"></script>
+    <script>
+      var ngo = angular.module('ngo', ['ngRoute']);
+
+      ngo.config(function($routeProvider)	 {
+        $routeProvider.
+          when('/', {
+            templateUrl: 'home.html',
+            // controller: 'CountryListCtrl'
+          }).
+          when('/gallery', {
+            templateUrl: 'Gallery.html',
+            // controller: 'CountryDetailCtrl'
+          }).
+          when('/login', {
+            templateUrl: 'Login.html',
+            // controller: 'CountryDetailCtrl'
+          }).
+          when('/story', {
+            templateUrl: 'Story.html',
+            // controller: 'CountryDetailCtrl'
+          }).
+          when('/about', {
+            templateUrl: 'scss.html',
+            // controller: 'CountryDetailCtrl'
+          }).
+          otherwise({
+            redirectTo: '/'
+          });
+      });
+
+      // countryApp.controller('CountryListCtrl', function ($scope, $http){
+      //   $http.get('countries.json').success(function(data) {
+      //     $scope.countries = data;
+      //   });
+      // });
+
+      // countryApp.controller('CountryDetailCtrl', function ($scope, $routeParams){
+      //   console.log($routeParams);
+      // });
+    </script>
+  </head>
+  <body>
+
+
+  <div class="wrap" style="position:relative;z-index: 1;">
+  
+  <nav>
+    <ul class="menu">
+      <li><a href="#/"><span class="iconic home"></span> Home</a></li>
+      <li><a href="#gallery"><span class="iconic plus-alt"></span> Gallery</a>  </li>
+      <li><a href="#about"><span class="iconic magnifying-glass"></span>About us</a></li>
+      <li><a href="#story"><span class="iconic map-pin"></span> Story</a></li>
+      <li><a href="#login"><span class="iconic mail"></span> Sign In</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  </div>
+
+
+
+    <div ng-view></div>
+
+
+
+
+    
+
+
+  </body>
+</html>
